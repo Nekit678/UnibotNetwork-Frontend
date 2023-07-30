@@ -1,0 +1,25 @@
+.lesson-card-collection {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(10rem, 20rem));
+
+  //! Rewrite to relative values!
+  @media screen and (max-width: 1440px) {
+    grid-template-columns: repeat(7, minmax(10rem, 20rem));
+  }
+
+  @media screen and (max-width: 1024px) {
+    grid-template-columns: repeat(4, minmax(10rem, 30rem));
+  }
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: repeat(3, minmax(10rem, 30rem));
+  }
+
+  @media screen and (max-width: 428px) {
+    grid-template-columns: repeat(2, minmax(10rem, 20rem));
+  }
+
+  @media screen and (max-width: 275px) {
+    grid-template-columns: repeat(1, minmax(10rem, 20rem));
+  }
+}
