@@ -11,3 +11,13 @@ export type ReportStatus = "нет отчета" |
   "принят" |
   "на проверке" |
   "есть ошибки"
+
+export interface Lesson {
+  lessonId: number
+  date: string
+  time: string
+  group: string
+  lessonNumber: number
+  lessonStatus: LessonStatus
+  reportStatus: ReportStatus
+}
