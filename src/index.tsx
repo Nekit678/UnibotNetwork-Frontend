@@ -6,16 +6,33 @@ import ruRU from 'antd/lib/locale/ru_RU';
 import dayjs from 'dayjs';
 import 'dayjs/locale/ru';
 import { ConfigProvider } from 'antd';
+import { Shedule } from './layouts/Shedule/Shedule';
+import { StudentData } from './layouts/StudentData/StudentData';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 
 dayjs.locale('ru');
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <App />,
+    children: [
+      { index: true, element: <Shedule /> },
+      { path: 'studentdata', element: <StudentData /> },
+    ],
+  },
+  { path: '*', element: <>Тут будет пэйдж 404 ошибки</> },
+])
+
+
 root.render(
   <React.StrictMode>
     <ConfigProvider locale={ruRU}>
-      <App />
+      <RouterProvider router={router} />
     </ConfigProvider>
   </React.StrictMode>
 );
