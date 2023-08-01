@@ -25,7 +25,7 @@ const router = createBrowserRouter([
       { path: 'studentdata', element: <StudentData /> },
     ],
   },
-  { path: '*', element: <>Тут будет пэйдж 404 ошибки</> },
+  { path: '*', element: <>need custom 404 error page</> },
 ])
 
 
