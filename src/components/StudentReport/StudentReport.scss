@@ -1,0 +1,40 @@
+.student-report {
+  display: grid;
+  grid-template-columns: minmax(20rem, 25rem) minmax(20rem, 25rem) minmax(20rem, 100rem);
+
+
+  @media screen and ((min-width: 428px) and (max-width: 47.8rem)) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content, min-content;
+
+    &__info {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 1;
+      grid-row-end: 2;
+    }
+
+    &__marks {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 2;
+    }
+
+
+    &__report-text {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row-start: 2;
+      grid-row-end: 2;
+    }
+
+  }
+
+  @media screen and (max-width: 428px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content;
+  }
+
+
+}

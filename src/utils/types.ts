@@ -12,6 +12,8 @@ export type ReportStatus = "нет отчета" |
   "на проверке" |
   "есть ошибки"
 
+export type Mark = 5 | 4 | 3
+
 export interface Lesson {
   lessonId: number
   date: string
@@ -20,4 +22,16 @@ export interface Lesson {
   lessonNumber: number
   lessonStatus: LessonStatus
   reportStatus: ReportStatus
+}
+
+export interface Report {
+  reportId: number
+  name: string
+  date: string
+  group: string
+  lessonNumber: number
+  reportText: string
+  tMark: number
+  pMark: number
+  aMark: number
 }
