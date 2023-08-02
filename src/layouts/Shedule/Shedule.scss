@@ -1,6 +1,14 @@
 .shedule {
   width: 100%;
-  padding-left: 4rem;
-  padding-right: 4rem;
-  padding-bottom: 4rem;
+  padding: 4rem;
+
+  &__header {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+
+    @media screen and (max-width: 48em) {
+      grid-template-columns: 1fr;
+    }
+  }
 }

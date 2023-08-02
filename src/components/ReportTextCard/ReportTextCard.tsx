@@ -13,7 +13,7 @@ export const ReportTextCard: React.FC<ReportTextCardProps> = ({ type, text }) =>
 
   return (
     <div style={{ height: "100%", borderRadius: "1.5rem", backgroundImage: "url(./cardImage.jpg)", backgroundSize: "cover", backgroundPosition: 'center' }}>
-      <Space className="report-text-card" direction="vertical" size={0}>
+      <Space className="report-text-card" direction="vertical" size={0} align="center">
 
         {type === "timezone" ?
           <Title className="report-text-card__title" level={3}>ЧАСОВОЙ ПОЯС: +3 от Москвы</Title>
