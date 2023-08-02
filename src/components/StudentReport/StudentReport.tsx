@@ -1,4 +1,4 @@
-import { Col, Row, Space } from "antd"
+import { Col, Row } from "antd"
 import { ReportInfoCard } from "../ReportInfoCard/ReportInfoCard"
 import { ReportMarkCard } from "../ReportMarkCard/ReportMarkCard"
 import { ReportTextCard } from "../ReportTextCard/ReportTextCard"

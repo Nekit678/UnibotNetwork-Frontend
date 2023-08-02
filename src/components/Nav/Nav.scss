@@ -9,5 +9,9 @@
     background-color: #247cd3;
     color: white;
     font-size: 1.6rem;
+
+    .ant-menu-item-selected {
+      background-color: rgb(84, 154, 212);
+    }
   }
 }

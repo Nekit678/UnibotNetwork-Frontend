@@ -1,9 +1,6 @@
-import { Col, Divider, Row, Space } from 'antd'
+import { Divider, Space } from 'antd'
 import './ReportCollection.scss'
 import { Lesson } from '../../utils/types';
-import { ReportInfoCard } from '../ReportInfoCard/ReportInfoCard';
-import { ReportMarkCard } from '../ReportMarkCard/ReportMarkCard';
-import { ReportTextCard } from '../ReportTextCard/ReportTextCard';
 import { StudentReport } from '../StudentReport/StudentReport';
 
 // Development only

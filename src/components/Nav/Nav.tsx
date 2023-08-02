@@ -1,32 +1,33 @@
-import { Menu, Typography } from 'antd';
+import { Menu } from 'antd';
 import {
-  HomeOutlined,
+  CalendarOutlined,
   UserOutlined,
-  MailOutlined,
-  AppstoreOutlined,
+  UsergroupAddOutlined,
+  SolutionOutlined
 } from '@ant-design/icons';
 import "./Nav.scss"
-
-const { Title } = Typography;
+import { useNavigate } from 'react-router-dom';
 
 export const Nav: React.FC<{ show: boolean }> = ({ show }) => {
+  const navigate = useNavigate()
+
   return (
     <nav className='nav'>
-      <Menu mode="vertical" theme="dark" className='nav__menu' style={{
+      <Menu onClick={(data => navigate(data.key))} mode="vertical" theme="dark" className='nav__menu' style={{
         borderRadius: "1.5rem",
         display: show ? "block" : "none"
       }}>
-        <Menu.Item key="home" icon={<HomeOutlined />}>
-          Главная
+        <Menu.Item key="/" icon={<CalendarOutlined />}>
+          Расписание
         </Menu.Item>
-        <Menu.Item key="profile" icon={<UserOutlined />}>
-          Профиль
+        <Menu.Item key="/groupdata" icon={<UsergroupAddOutlined />}>
+          Данные группы
         </Menu.Item>
-        <Menu.Item key="messages" icon={<MailOutlined />}>
-          Сообщения
+        <Menu.Item key="/studentdata" icon={<UserOutlined />}>
+          Данные ученика
         </Menu.Item>
-        <Menu.Item key="apps" icon={<AppstoreOutlined />}>
-          Приложения
+        <Menu.Item key="/subreport" icon={<SolutionOutlined />}>
+          Сдача отчетов
         </Menu.Item>
       </Menu>
     </nav >
