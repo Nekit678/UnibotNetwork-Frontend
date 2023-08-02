@@ -47,10 +47,10 @@ export const FilterLesson: React.FC<FilterProps> = (
   return (
     <Space wrap className="filter-lesson">
 
-      <Select style={{ minWidth: 120 }} mode="multiple" showArrow allowClear placeholder="Статус урока"
+      <Select style={{ minWidth: 126 }} mode="multiple" showArrow allowClear placeholder="Статус урока"
         options={optionsLesson} tagRender={({ value }) => (<CustomTag status={value} />)} />
 
-      <Select style={{ minWidth: 130 }} mode="multiple" showArrow allowClear placeholder="Статус отчета"
+      <Select style={{ minWidth: 133 }} mode="multiple" showArrow allowClear placeholder="Статус отчета"
         options={optionsReport} tagRender={({ value }) => (<CustomTag status={value} />)} />
 
       <Select style={{ minWidth: 100 }} mode="multiple" showArrow allowClear placeholder="Группа"

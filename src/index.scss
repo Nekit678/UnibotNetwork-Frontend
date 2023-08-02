@@ -1,3 +1,5 @@
+@import './assets/css/fonts.scss';
+
 :root {
   --fz-h1: 3.6rem;
   --fz-h2: 2.4rem;
@@ -58,6 +60,11 @@ body {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  font-family: Aeroport, sans-serif;
+}
+
+.ant-typography {
+  font-family: Aeroport, sans-serif;
 }
 
 :focus,
