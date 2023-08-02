@@ -3,7 +3,7 @@
   grid-template-columns: minmax(20rem, 25rem) minmax(20rem, 25rem) minmax(20rem, 100rem);
 
 
-  @media screen and ((min-width: 428px) and (max-width: 47.8rem)) {
+  @media screen and ((min-width: 26.75em) and (max-width: 48em)) {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: min-content, min-content;
 
@@ -31,7 +31,7 @@
 
   }
 
-  @media screen and (max-width: 428px) {
+  @media screen and (max-width: 26.75em) {
     grid-template-columns: 1fr;
     grid-template-rows: min-content;
   }

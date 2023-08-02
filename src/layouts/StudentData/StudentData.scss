@@ -3,4 +3,32 @@
   padding-left: 4rem;
   padding-right: 4rem;
   padding-bottom: 4rem;
+
+  &__header {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    @media screen and ((min-width: 26.75em) and (max-width: 48em)) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: min-content, min-content;
+    }
+
+    @media screen and (max-width: 26.75em) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__filter {
+    @media screen and ((min-width: 26.75em) and (max-width: 48em)) {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 2;
+    }
+  }
+
+  &__comments {}
+
+  &__timezone {}
 }

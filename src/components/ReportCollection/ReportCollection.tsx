@@ -1,4 +1,4 @@
-import { Col, Row, Space } from 'antd'
+import { Col, Divider, Row, Space } from 'antd'
 import './ReportCollection.scss'
 import { Lesson } from '../../utils/types';
 import { ReportInfoCard } from '../ReportInfoCard/ReportInfoCard';
@@ -31,7 +31,11 @@ export const ReportCardCollection: React.FC<ReportCardCollectionProps> = () => {
   return (
     <Space size={20} className='report-card-collection' direction='vertical'>
       {lessonList.map((item) => (
-        <StudentReport />))}
+        <>
+          <StudentReport />
+          <Divider style={{ background: "blue", margin: 0 }} />
+        </>
+      ))}
     </Space>
 
   )

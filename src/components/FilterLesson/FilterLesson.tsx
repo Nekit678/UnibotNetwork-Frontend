@@ -33,12 +33,20 @@ const optionsGroup: { value: string }[] = [
   { value: "255-123" }
 ];
 
+interface FilterProps {
+  lessonStatusFilter?: boolean
+  reportStatusFilter?: boolean
+  studentFilter?: boolean
+  dateFilter?: boolean
+  groupFilter?: boolean
+}
 
-
-export const FilterLesson: React.FC = () => {
+export const FilterLesson: React.FC<FilterProps> = (
+  { dateFilter, groupFilter, lessonStatusFilter, reportStatusFilter, studentFilter }) => {
 
   return (
     <Space wrap className="filter-lesson">
+
       <Select style={{ minWidth: 120 }} mode="multiple" showArrow allowClear placeholder="Статус урока"
         options={optionsLesson} tagRender={({ value }) => (<CustomTag status={value} />)} />
 
@@ -49,6 +57,7 @@ export const FilterLesson: React.FC = () => {
         options={optionsGroup} />
 
       <RangePicker showTime={true} style={{ minWidth: 170 }} inputReadOnly format="DD.MM.YY" />
+
     </Space>
   )
 }

@@ -11,7 +11,7 @@ export const StudentReport: React.FC = () => {
     <Row className="student-report" gutter={[10, 10]}>
       <Col className="student-report__info"><ReportInfoCard /></Col>
       <Col className="student-report__marks"><ReportMarkCard /></Col>
-      <Col className="student-report__report-text"><ReportTextCard /></Col>
+      <Col className="student-report__report-text"><ReportTextCard type="text" /></Col>
     </Row>
   )
 }
