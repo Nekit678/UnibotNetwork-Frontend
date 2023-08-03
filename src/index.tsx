@@ -9,6 +9,7 @@ import { ConfigProvider } from 'antd';
 import { Shedule } from './layouts/Shedule/Shedule';
 import { StudentData } from './layouts/StudentData/StudentData';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { NotFound } from './layouts/NotFound/NotFound';
 
 dayjs.locale('ru');
 
@@ -25,7 +26,7 @@ const router = createBrowserRouter([
       { path: 'studentdata', element: <StudentData /> },
     ],
   },
-  { path: '*', element: <>need custom 404 error page</> },
+  { path: '*', element: <NotFound /> },
 ])
 
 
