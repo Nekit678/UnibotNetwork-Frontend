@@ -33,6 +33,14 @@ const optionsGroup: { value: string }[] = [
   { value: "255-123" }
 ];
 
+const optionsStudent: { value: string }[] = [
+  { value: "Иван Иванов" },
+  { value: "Олег Смирнов" },
+  { value: "Данил Сидоров" },
+  { value: "Василий Петров" },
+  { value: "Виктор Краснов" }
+];
+
 interface FilterProps {
   lessonStatusFilter?: boolean
   reportStatusFilter?: boolean
@@ -47,16 +55,20 @@ export const FilterLesson: React.FC<FilterProps> = (
   return (
     <Space wrap className="filter-lesson">
 
-      <Select style={{ minWidth: 126 }} mode="multiple" showArrow allowClear placeholder="Статус урока"
-        options={optionsLesson} tagRender={({ value }) => (<CustomTag status={value} />)} />
+      {studentFilter? <Select dropdownStyle={{ width: "100%"}} style={{ minWidth: 100 }} showArrow allowClear placeholder="Ученик"
+        options={optionsStudent} /> : <></>}
 
-      <Select style={{ minWidth: 133 }} mode="multiple" showArrow allowClear placeholder="Статус отчета"
-        options={optionsReport} tagRender={({ value }) => (<CustomTag status={value} />)} />
+      {lessonStatusFilter ? <Select style={{ minWidth: 126 }} mode="multiple" showArrow allowClear placeholder="Статус урока"
+        options={optionsLesson} tagRender={({ value }) => (<CustomTag status={value} />)} /> : <></>}
 
-      <Select style={{ minWidth: 100 }} mode="multiple" showArrow allowClear placeholder="Группа"
-        options={optionsGroup} />
+      {reportStatusFilter ? <Select style={{ minWidth: 133 }} mode="multiple" showArrow allowClear placeholder="Статус отчета"
+        options={optionsReport} tagRender={({ value }) => (<CustomTag status={value} />)} /> : <></>}
 
-      <RangePicker showTime={true} style={{ minWidth: 170 }} inputReadOnly format="DD.MM.YY" />
+      {groupFilter ? <Select style={{ minWidth: 100 }} mode="multiple" showArrow allowClear placeholder="Группа"
+        options={optionsGroup} /> : <></>}
+
+      {dateFilter ? <RangePicker showTime={true} style={{ minWidth: 170 }} inputReadOnly format="DD.MM.YY" /> : <></>}
+
 
     </Space>
   )

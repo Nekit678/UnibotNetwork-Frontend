@@ -12,7 +12,7 @@ export const StudentData: React.FC = () => {
 
       <Row className='student-data__header'>
         <Col className='student-data__filter'>
-          <FilterLesson />
+          <FilterLesson groupFilter dateFilter studentFilter/>
         </Col>
         <Col className='student-data__comments'>
           <ReportTextCard type='comment' />

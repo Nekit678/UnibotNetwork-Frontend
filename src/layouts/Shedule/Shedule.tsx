@@ -10,7 +10,7 @@ export const Shedule: React.FC = () => {
     <Space className="shedule" direction="vertical" size={16}>
 
       <Row className="shedule__header">
-        <Col><FilterLesson /></Col>
+        <Col><FilterLesson dateFilter groupFilter lessonStatusFilter reportStatusFilter/></Col>
         <Col><ReportTextCard type="timezone" /></Col>
       </Row>
 

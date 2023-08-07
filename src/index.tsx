@@ -10,6 +10,7 @@ import { Shedule } from './layouts/Shedule/Shedule';
 import { StudentData } from './layouts/StudentData/StudentData';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { NotFound } from './layouts/NotFound/NotFound';
+import { GroupData } from './layouts/GroupData/GroupData';
 
 dayjs.locale('ru');
 
@@ -24,6 +25,7 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <Shedule /> },
       { path: 'studentdata', element: <StudentData /> },
+      { path: 'groupdata', element: <GroupData /> },
     ],
   },
   { path: '*', element: <NotFound /> },

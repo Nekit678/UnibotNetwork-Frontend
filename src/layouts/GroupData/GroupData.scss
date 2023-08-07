@@ -1,0 +1,29 @@
+.group-data {
+  width: 100%;
+  padding: 4rem;
+
+  &__collection {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(10rem, 40rem));
+
+    @media screen and (max-width: 90em) {
+      grid-template-columns: repeat(4, minmax(10rem, 40rem));
+    }
+
+    @media screen and (max-width: 64em) {
+      grid-template-columns: repeat(3, minmax(10rem, 40rem));
+    }
+
+    @media screen and (max-width: 48em) {
+      grid-template-columns: repeat(2, minmax(10rem, 30rem));
+    }
+
+    @media screen and (max-width: 26.75em) {
+      grid-template-columns: repeat(1, minmax(10rem, 40rem));
+    }
+
+    // @media screen and (max-width: 17.1875em) {
+    //   grid-template-columns: repeat(1, minmax(10rem, 20rem));
+    // }
+  }
+}
