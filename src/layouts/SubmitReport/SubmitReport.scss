@@ -1,0 +1,7 @@
+.submit-report {
+  padding: 4rem;
+
+  @media screen and (max-width: 48em) {
+    padding: 4rem 1.6rem;
+  }
+}

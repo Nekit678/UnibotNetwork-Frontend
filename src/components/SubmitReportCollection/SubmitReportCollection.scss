@@ -1,0 +1,44 @@
+.sub-rep-collection {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr 2fr;
+  row-gap: 1rem;
+  gap: 1rem;
+
+  @media screen and (max-width: 64em) {
+    grid-template-columns: 1fr 1fr 2fr;
+  }
+
+  @media screen and (max-width: 48em) {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  // @media screen and (max-width: 32.8em) {
+  //   grid-template-columns: 1fr 1fr;
+  // }
+
+  @media screen and (max-width: 26.75em) {
+    grid-template-columns: 1fr;
+  }
+
+  &__student {}
+
+  &__comment {
+    @media screen and ((min-width:26.75em) and (max-width: 64em)) {
+      grid-row-start: 1;
+      grid-row-end: 2;
+      grid-column-start: 2;
+      grid-column-end: 3;
+    }
+  }
+
+  &__marks {}
+
+  &__text {
+    @media screen and ((min-width:48em) and (max-width: 64em)) {
+      grid-row-start: 2;
+      grid-row-end: 3;
+      grid-column-start: 1;
+      grid-column-end: 4;
+    }
+  }
+}
