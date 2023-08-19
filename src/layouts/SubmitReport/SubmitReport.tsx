@@ -6,6 +6,7 @@ export const SubmitReport = () => {
   return (
     <Space direction="vertical" className="submit-report" >
       <SubmitReportCollection />
+
     </Space>
   )
 }

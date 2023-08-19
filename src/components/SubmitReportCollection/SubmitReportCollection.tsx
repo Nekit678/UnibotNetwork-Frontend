@@ -1,26 +1,36 @@
-import { Col, Row } from "antd"
-import { ReportTextCard } from "../ReportTextCard/ReportTextCard"
-import { ReportMarkCard } from "../ReportMarkCard/ReportMarkCard"
-import { StudentCard } from "../StudentCard/StudentCard"
+import { Col, Modal, Row } from "antd"
 import "./SubmitReportCollection.scss"
+import { SubmitReportCard } from "../SubmitReportCard/SubmitReportCard"
 
 
 
-export const SubmitReportCollection = () => {
+export const SubmitReportCollection: React.FC = () => {
   return (
-    <Row className="sub-rep-collection">
-      <Col className="sub-rep-collection__student">
-        <StudentCard />
+    <Row gutter={[14, 14]}>
+      <Col>
+        <SubmitReportCard />
       </Col>
-      <Col className="sub-rep-collection__marks">
-        <ReportMarkCard />
+      <Col>
+        <SubmitReportCard />
       </Col>
-      <Col className="sub-rep-collection__comment">
-        <ReportTextCard type="comment" />
+      <Col>
+        <SubmitReportCard />
       </Col>
-      <Col className="sub-rep-collection__text">
-        <ReportTextCard type="text" />
+      <Col>
+        <SubmitReportCard />
       </Col>
+      <Col>
+        <SubmitReportCard />
+      </Col>
+      <Col>
+        <SubmitReportCard />
+      </Col>
+      <Col>
+        <SubmitReportCard />
+      </Col>
+
+      
+
     </Row>
   )
 }

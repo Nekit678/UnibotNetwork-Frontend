@@ -14,7 +14,7 @@ export const Header: React.FC = () => {
         <Button onClick={() => (setShowNav(!showNav))}><MenuOutlined /></Button>
       </div>
 
-      <Nav show={showNav} />
+      <Nav show={showNav} closeFn={() => setShowNav(false)} />
     </header>
   )
 }
