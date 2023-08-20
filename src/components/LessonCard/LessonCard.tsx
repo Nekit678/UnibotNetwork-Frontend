@@ -22,8 +22,8 @@ export const LessonCard: React.FC<Lesson> = ({ date, group, lessonNumber, lesson
 
         {isHover ?
           <Space direction="vertical" size={4} align="center">
-            <Button size="small">Данные группы</Button>
-            <Button size="small">Сдать отчет</Button>
+            <Button style={{ fontSize: "0.8em", height: "fit-content", padding: "0 1rem" }}>Данные группы</Button>
+            <Button style={{ fontSize: "0.8em", height: "fit-content", padding: "0 1rem" }}>Сдать отчет</Button>
           </Space> :
           <Space direction="vertical" size={4} align="center">
             <CustomTag status={lessonStatus} />
