@@ -1,21 +1,25 @@
 import { Form, Input, Select } from "antd"
+import { useEffect } from "react"
 
 
 
-export const SubmitReportForm: React.FC<any> = () => {
+export const SubmitReportForm: React.FC<any> = ({ setForm }) => {
+  const [form] = Form.useForm()
+
+  useEffect(() => {
+    setForm(form)
+  }, [setForm, form])
+
   return (
     <div>
-      <Form layout="vertical">
+      <Form layout="vertical"
+        form={form}>
 
-        <Form.Item label="Дата">
-          <Select disabled />
-        </Form.Item>
-
-        <Form.Item label="Группа">
-          <Select disabled />
-        </Form.Item>
-
-        <Form.Item label="Оценка теории">
+        <Form.Item label="Оценка теории"
+          name="tmark"
+          rules={[
+            { required: true, message: "Обязательное поле!" }
+          ]}>
           <Select placeholder="Оценка..." options={[
             { value: 5, label: 5 },
             { value: 4, label: 4 },
@@ -23,7 +27,11 @@ export const SubmitReportForm: React.FC<any> = () => {
           ]} />
         </Form.Item>
 
-        <Form.Item label="Оценка практики">
+        <Form.Item label="Оценка практики"
+          name="pmark"
+          rules={[
+            { required: true, message: "Обязательное поле!" }
+          ]}>
           <Select placeholder="Оценка..." options={[
             { value: 5, label: 5 },
             { value: 4, label: 4 },
@@ -31,7 +39,11 @@ export const SubmitReportForm: React.FC<any> = () => {
           ]} />
         </Form.Item>
 
-        <Form.Item label="Оценка интереса">
+        <Form.Item label="Оценка интереса"
+          name="amark"
+          rules={[
+            { required: true, message: "Обязательное поле!" }
+          ]}>
           <Select placeholder="Оценка..." options={[
             { value: 5, label: 5 },
             { value: 4, label: 4 },
@@ -39,8 +51,12 @@ export const SubmitReportForm: React.FC<any> = () => {
           ]} />
         </Form.Item>
 
-        <Form.Item label="Отчет">
-          <Input.TextArea placeholder="Напишите текст отчета..." />
+        <Form.Item label="Отчет"
+          name="reportText"
+          rules={[
+            { required: true, message: "Обязательное поле!" }
+          ]}>
+          <Input.TextArea style={{ resize: "none" }} placeholder="Напишите текст отчета..." />
         </Form.Item>
 
       </Form>
