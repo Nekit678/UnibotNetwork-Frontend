@@ -1,0 +1,107 @@
+.login-page-wrapper {
+  height: 100vh;
+  display: flex;
+  background-image: linear-gradient(-180deg, #a7a3a3, #fffbfb);
+}
+
+
+.login-page {
+  max-width: 144rem;
+  flex-grow: 1;
+  margin: 0 auto;
+
+  &__login {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 2rem;
+    padding: 10rem 4rem;
+
+    @media screen and (max-width: 48em) {
+      grid-template-columns: 1fr;
+      padding: 5rem 4rem;
+    }
+  }
+
+  &__form-part {
+    padding: 4rem 0;
+    background-image: linear-gradient(95deg, #247cd3, #a8bdd4);
+    border-radius: 1.5rem;
+    box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.5);
+
+    @media screen and (max-width: 48em) {
+      grid-row-start: 1;
+      grid-row-end: 2;
+      background-image: linear-gradient(20deg, #247cd3, #a8bdd4);
+    }
+  }
+
+  &__form {
+    width: 50rem;
+
+    @media screen and (max-width: 64em) {
+      width: 35rem;
+    }
+
+    @media screen and (max-width: 28em) {
+      width: 25rem;
+    }
+  }
+
+  &__welcome-part {
+    background-image: linear-gradient(95deg, #a8bdd4, white);
+    border-radius: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+    padding: 3rem 1rem;
+    row-gap: 2rem;
+    gap: 2rem;
+    box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.5);
+
+    img {
+      max-width: 20rem;
+
+      @media screen and (max-width: 48em) {
+        width: clamp(5rem, 100%, 20rem);
+      }
+    }
+
+    @media screen and (max-width: 48em) {
+      grid-row-start: 0;
+      grid-row-end: 1;
+      background-image: linear-gradient(355deg, #a8bdd4, white);
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__learn-more-btn {
+    width: 10rem;
+    background-color: #247cd3;
+    color: white;
+    width: fit-content !important;
+    border-radius: 1.5rem !important;
+    height: 3.5rem !important;
+    margin-top: 1rem;
+
+    &:hover {
+      box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.7);
+    }
+
+  }
+
+  &__welcome-title {
+    @media screen and (max-width: 28em) {
+      font-size: 1.5rem !important;
+      line-height: 2rem !important;
+    }
+  }
+
+  &__learn-more-block {
+    @media screen and (max-width: 48em) {
+      gap: 0rem !important;
+    }
+
+  }
+
+}

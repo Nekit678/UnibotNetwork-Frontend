@@ -3,7 +3,8 @@ import {
   CalendarOutlined,
   UserOutlined,
   UsergroupAddOutlined,
-  SolutionOutlined
+  SolutionOutlined,
+  LoginOutlined
 } from '@ant-design/icons';
 import "./Nav.scss"
 import { useNavigate } from 'react-router-dom';
@@ -18,6 +19,9 @@ export const Nav: React.FC<{ show: boolean, closeFn: () => (void) }> = ({ show, 
         borderRadius: "1.5rem",
         display: show ? "block" : "none"
       }}>
+        <Menu.Item style={{ color: "red" }} key="/login" icon={<LoginOutlined />}>
+          Check login screen
+        </Menu.Item>
         <Menu.Item key="/" icon={<CalendarOutlined />}>
           Расписание
         </Menu.Item>

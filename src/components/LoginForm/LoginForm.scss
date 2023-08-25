@@ -1,0 +1,39 @@
+.login-form {
+
+  &__input {
+    background-color: rgba(0, 128, 0, 0) !important;
+    border-bottom: 2px solid white !important;
+    border-radius: 0rem;
+    color: white !important;
+
+    .ant-input::placeholder {
+      color: #d9d9d9;
+    }
+
+    svg {
+      color: white;
+    }
+
+    input {
+      background-color: rgba(0, 128, 0, 0) !important;
+      color: white !important;
+    }
+  }
+
+  &__button {
+    width: 10rem;
+    background-color: white;
+    color: #247cd3;
+    border-radius: 1.5rem !important;
+    height: 3.5rem !important;
+    margin-top: 1rem;
+
+    &:hover {
+      box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.7);
+    }
+  }
+
+  .ant-form-item-explain-error{
+    color: yellow;
+  }
+}

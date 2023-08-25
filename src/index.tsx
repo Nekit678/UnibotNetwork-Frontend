@@ -12,6 +12,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { NotFound } from './layouts/NotFound/NotFound';
 import { GroupData } from './layouts/GroupData/GroupData';
 import { SubmitReport } from './layouts/SubmitReport/SubmitReport';
+import { Login } from './layouts/Login/Login';
 
 dayjs.locale('ru');
 
@@ -27,10 +28,11 @@ const router = createBrowserRouter([
       { index: true, element: <Shedule /> },
       { path: 'studentdata', element: <StudentData /> },
       { path: 'groupdata', element: <GroupData /> },
-      { path: 'subreport', element: <SubmitReport /> }
+      { path: 'subreport', element: <SubmitReport /> },
     ],
   },
   { path: '*', element: <NotFound /> },
+  { path: 'login', element: <Login /> }
 ])
 
 
